@@ -1,20 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[CreateAssetMenu(fileName = "ScriptableObject", menuName = "Collectible Data")]
 
-public class CollectibleData : ScriptableObject {
+public class CollectibleData : ScriptableObject
+{
 
-    private int speed;
+    public FloatVariable speed;
     private Color color;
-
-    public int Speed
-    {
-        get { return speed; }
-        set { speed = value; }
-    }
     public Color Color
     {
-        get { return color; }
-        set { color = value; }
+        get
+        {
+            return color;
+        }
+
+        set
+        {
+            color = value;
+        }
     }
 }

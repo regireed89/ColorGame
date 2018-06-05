@@ -9,17 +9,18 @@ public class CollectibleBehaviour : MonoBehaviour
 
     private void OnEnable()
     {
-        data = ScriptableObject.CreateInstance<CollectibleData>();
+       // data = ScriptableObject.CreateInstance<CollectibleData>();
     }
     // Use this for initialization
     void Start()
     {
-        GetComponentInChildren<SpriteRenderer>().material.color = data.Color;
+        transform.GetChild(0).GetComponent<SpriteRenderer>().color = data.Color;
+        Destroy(this.gameObject, 2);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.TransformDirection(new Vector3(2 * Time.deltaTime, 0, 0));
+        transform.Translate(data.speed.Value, 0, 0, Space.Self);
     }
 }
