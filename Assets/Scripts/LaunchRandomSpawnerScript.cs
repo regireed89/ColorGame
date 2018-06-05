@@ -26,7 +26,7 @@ public class LaunchRandomSpawnerScript : MonoBehaviour
         {
             var r = Random.Range(0, spawners.Count - 1);
             spawners[r].LaunchSpawner();
-            SpawnTime.Value = ResetTime.Value;
+            SpawnTime.Value = ResetTime.Value;    
         }
     }
 }

@@ -6,7 +6,20 @@ using UnityEngine;
 public class CollectibleData : ScriptableObject
 {
 
-    public FloatVariable speed;
+    private float speed;
+    public float Speed
+    {
+        get
+        {
+            return speed;
+        }
+
+        set
+        {
+            speed = value;
+        }
+    }
+
     private Color color;
     public Color Color
     {
@@ -20,4 +33,6 @@ public class CollectibleData : ScriptableObject
             color = value;
         }
     }
+
+
 }
