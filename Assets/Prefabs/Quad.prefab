@@ -38,6 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4195381688512578}
   - component: {fileID: 212674357719133396}
+  - component: {fileID: 114362860689977884}
   m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
@@ -128,6 +129,20 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114362860689977884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1891392218359990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65485c40d207ae4d88ac9ccf92b4ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BorderResetTime: {fileID: 11400000, guid: 7f98e077661d42849a63bc51f0fd7541, type: 2}
+  BorderColorChangeTimer: {fileID: 11400000, guid: d269987ad83ce0a4e90eb7f315263ff5,
+    type: 2}
 --- !u!212 &212674357719133396
 SpriteRenderer:
   m_ObjectHideFlags: 1

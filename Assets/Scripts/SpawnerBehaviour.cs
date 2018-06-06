@@ -5,6 +5,7 @@ public class SpawnerBehaviour : MonoBehaviour
 {
     public GameObject prefab;
     private Colors color;
+
     // Use this for initialization
     void Start()
     {
@@ -19,5 +20,4 @@ public class SpawnerBehaviour : MonoBehaviour
         var rSpeed = Random.Range(0.05f, 0.2f);
         go.GetComponent<CollectibleBehaviour>().data.Speed = rSpeed;
     }
-
 }

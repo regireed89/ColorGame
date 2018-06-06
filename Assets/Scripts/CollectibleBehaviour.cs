@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CollectibleBehaviour : MonoBehaviour
 {
-
     public CollectibleData data;
 
     private void OnEnable()
     {
        data = ScriptableObject.CreateInstance<CollectibleData>();
     }
+
     // Use this for initialization
     void Start()
     {

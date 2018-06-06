@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Colors : MonoBehaviour
 {
-
     public List<Color> colors;
     Color red = new Color(255, 0, 0, 255);
     Color blue = new Color(0, 0, 255, 255);
@@ -14,8 +13,7 @@ public class Colors : MonoBehaviour
     Color orange = new Color(255, 125, 0, 255);
     Color pink = new Color(255, 127, 206, 255);
 
-    // Use this for initialization
-    void Start()
+    private void OnEnable()
     {
         colors = new List<Color>();
         colors.Add(red);
@@ -26,5 +24,4 @@ public class Colors : MonoBehaviour
         colors.Add(orange);
         colors.Add(pink);
     }
-
 }
