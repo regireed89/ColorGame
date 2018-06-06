@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaunchRandomSpawnerScript : MonoBehaviour
+public class LaunchRandomSpawnerBehaviour : MonoBehaviour
 {
     List<SpawnerBehaviour> spawners;
     public FloatVariable SpawnTime;
