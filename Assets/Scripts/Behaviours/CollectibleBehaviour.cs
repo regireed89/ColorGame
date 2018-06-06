@@ -21,6 +21,6 @@ public class CollectibleBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(data.Speed, 0, 0, Space.Self);
+        this.transform.Translate(data.Speed, 0, 0);
     }
 }

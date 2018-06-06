@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4688101054773604}
   - component: {fileID: 212396636310269164}
   - component: {fileID: 114469795940385388}
-  - component: {fileID: 135367520714669154}
+  - component: {fileID: 135758472880363634}
   m_Layer: 0
   m_Name: Collectible
   m_TagString: Collectible
@@ -52,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1168480867553494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7.36, y: -0.15, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 4725912800504614}
@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 2e2fdb6964fd32e4688a97b8e30cf1db, type: 2}
---- !u!135 &135367520714669154
+--- !u!135 &135758472880363634
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
