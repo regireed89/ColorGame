@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollectObjects : MonoBehaviour
 {
     public IntergerVariable Score;
     public GameObject border;
     public GameEvent changeScore;
+
     // Update is called once per frame
     void Update()
     {
@@ -21,10 +23,12 @@ public class CollectObjects : MonoBehaviour
                     hit.collider.gameObject.SetActive(false);
                     changeScore.Raise();
                 }
-                else if (hit.collider.gameObject.GetComponent<CollectibleBehaviour>().data.Color != border.GetComponent<SpriteRenderer>().color)
+                else if (hit.collider.tag == "Collectible" && hit.collider.gameObject.GetComponent<CollectibleBehaviour>().data.Color != border.GetComponent<SpriteRenderer>().color)
                 {
-                    hit.collider.gameObject.SetActive(false);
+                    SceneManager.LoadScene(0);
                 }
+                else
+                    return;
             }
         }
     }
