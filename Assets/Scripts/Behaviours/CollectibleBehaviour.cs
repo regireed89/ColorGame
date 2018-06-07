@@ -15,7 +15,7 @@ public class CollectibleBehaviour : MonoBehaviour
     void Start()
     {
         transform.GetChild(0).GetComponent<SpriteRenderer>().color = data.Color;
-        Destroy(this.gameObject, 5);
+
     }
 
     // Update is called once per frame

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class ScoreKeeper : MonoBehaviour {
 
     public IntergerVariable score;
-    public IntergerVariable highScore;
     public Text scoreText;
     public Text highScoreText;
 
@@ -14,20 +13,22 @@ public class ScoreKeeper : MonoBehaviour {
 	void Start ()
     {
         score.Value = 0;
-	}
+        highScoreText.text = "HighScore" + "\n" + PlayerPrefs.GetInt("HighScore", 0).ToString();
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (score.Value > highScore.Value)
-            highScore.Value += 1;
-
         scoreText.text = "Score" + "\n" + score.Value;
-        highScoreText.text = "Highscore" + "\n" + highScore.Value;
 	}
 
     public void ChangeScore(int value)
-    {
+    {       
         score.Value += value;
+        if (score.Value > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", score.Value);
+            highScoreText.text = score.Value.ToString();
+        }
     }
 }

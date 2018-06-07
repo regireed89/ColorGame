@@ -9,6 +9,9 @@ public class LoseBehaviour : MonoBehaviour {
     {
         if (other.gameObject.GetComponent<CollectibleBehaviour>().data.Color == gameObject.GetComponent<SpriteRenderer>().color)
             SceneManager.LoadScene(0);
-
+        else
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

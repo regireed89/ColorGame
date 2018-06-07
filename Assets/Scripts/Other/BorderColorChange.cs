@@ -13,7 +13,7 @@ public class BorderColorChange : MonoBehaviour {
     {
         color = FindObjectOfType<Colors>();
         BorderColorChangeTimer.Value = BorderResetTime.Value;
-        var rColor = Random.Range(0, color.colors.Count - 1);
+        var rColor = Random.Range(0, color.colors.Count);
         gameObject.GetComponent<SpriteRenderer>().color = color.colors[rColor];
     }
 	
@@ -24,7 +24,7 @@ public class BorderColorChange : MonoBehaviour {
         if (BorderColorChangeTimer.Value <= 0)
         {
             BorderColorChangeTimer.Value = BorderResetTime.Value;
-            var rColor = Random.Range(0, color.colors.Count - 1);
+            var rColor = Random.Range(0, color.colors.Count);
             gameObject.GetComponent<SpriteRenderer>().color = color.colors[rColor];     
         }
     }
