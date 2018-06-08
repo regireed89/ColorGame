@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c65485c40d207ae4d88ac9ccf92b4ac0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - BorderResetTime: {fileID: 11400000, guid: 7f98e077661d42849a63bc51f0fd7541, type: 2}
+  - BorderColorChangeTimer: {fileID: 11400000, guid: d269987ad83ce0a4e90eb7f315263ff5,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

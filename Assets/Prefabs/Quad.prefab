@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 54036995868118058}
   - component: {fileID: 65767820506535726}
   - component: {fileID: 114056342474350374}
+  - component: {fileID: 114221199925461868}
   m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
@@ -157,7 +158,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.23, y: 4.97, z: 0.1}
+  m_Size: {x: 3.69, y: 3.7, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114056342474350374
 MonoBehaviour:
@@ -170,6 +171,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e49f64f14572264c92562218afb06bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Collect: {fileID: 11400000, guid: b86ac797256a580409bbf4084a0c0e7e, type: 2}
+--- !u!114 &114221199925461868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1891392218359990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9e1e2a6a5cb55044aaccf0402e8a063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 6705484274912ad4e8b5b6f687831cc3, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114362860689977884}
+        m_MethodName: BorderChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114362860689977884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,6 +214,8 @@ MonoBehaviour:
   BorderResetTime: {fileID: 11400000, guid: 7f98e077661d42849a63bc51f0fd7541, type: 2}
   BorderColorChangeTimer: {fileID: 11400000, guid: d269987ad83ce0a4e90eb7f315263ff5,
     type: 2}
+  Collect: {fileID: 11400000, guid: b86ac797256a580409bbf4084a0c0e7e, type: 2}
+  OnBorderChange: {fileID: 11400000, guid: 6705484274912ad4e8b5b6f687831cc3, type: 2}
 --- !u!212 &212674357719133396
 SpriteRenderer:
   m_ObjectHideFlags: 1

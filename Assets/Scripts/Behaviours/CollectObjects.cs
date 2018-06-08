@@ -9,6 +9,7 @@ public class CollectObjects : MonoBehaviour
     public GameObject border;
     public GameEvent changeScore;
 
+    public BoolVariable Collect;
     // Update is called once per frame
     void Update()
     {
@@ -18,17 +19,39 @@ public class CollectObjects : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 1000))
             {
-                if (hit.collider.tag == "Collectible" && hit.collider.gameObject.GetComponent<CollectibleBehaviour>().data.Color == border.GetComponent<SpriteRenderer>().color)
+                if (Collect.Value)
                 {
-                    hit.collider.gameObject.SetActive(false);
-                    changeScore.Raise();
+                    if (hit.collider.tag.Equals("Collectible") && hit.collider.gameObject.GetComponent<CollectibleBehaviour>().data.Color == border.GetComponent<SpriteRenderer>().color)
+                    {
+                        hit.collider.gameObject.SetActive(false);
+                        changeScore.Raise();
+                    }
+                    else if (hit.collider.tag.Equals("Collectible") && hit.collider.gameObject.GetComponent<CollectibleBehaviour>().data.Color != border.GetComponent<SpriteRenderer>().color)
+                    {
+                        SceneManager.LoadScene(0);
+                    }
+                    else
+                    {
+                        return;
+                    }
                 }
-                else if (hit.collider.tag == "Collectible" && hit.collider.gameObject.GetComponent<CollectibleBehaviour>().data.Color != border.GetComponent<SpriteRenderer>().color)
-                {
-                    SceneManager.LoadScene(0);
-                }
+
                 else
-                    return;
+                {
+                    if (hit.collider.tag.Equals("Collectible") && hit.collider.gameObject.GetComponent<CollectibleBehaviour>().data.Color != border.GetComponent<SpriteRenderer>().color)
+                    {
+                        hit.collider.gameObject.SetActive(false);
+                        changeScore.Raise();
+                    }
+                    else if (hit.collider.tag.Equals("Collectible") && hit.collider.gameObject.GetComponent<CollectibleBehaviour>().data.Color == border.GetComponent<SpriteRenderer>().color)
+                    {
+                        SceneManager.LoadScene(0);
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
             }
         }
     }

@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class ScoreKeeper : MonoBehaviour {
 
     public IntergerVariable score;
+    public BoolVariable Collect;
     public Text scoreText;
     public Text highScoreText;
+    public Text CollectText;
 
 	// Use this for initialization
 	void Start ()
@@ -20,7 +22,19 @@ public class ScoreKeeper : MonoBehaviour {
 	void Update ()
     {
         scoreText.text = "Score" + "\n" + score.Value;
-	}
+        if (Collect.Value)
+        {
+            CollectText.text = "Collect";
+            CollectText.color = Color.green;
+        }
+        else
+        {
+            CollectText.text = "Avoid";
+            CollectText.color = Color.red;
+        }
+        if(Input.GetKeyDown(KeyCode.D))
+            PlayerPrefs.DeleteAll();
+    }
 
     public void ChangeScore(int value)
     {       
@@ -28,7 +42,7 @@ public class ScoreKeeper : MonoBehaviour {
         if (score.Value > PlayerPrefs.GetInt("HighScore", 0))
         {
             PlayerPrefs.SetInt("HighScore", score.Value);
-            highScoreText.text = score.Value.ToString();
+            highScoreText.text = "Highscore " + score.Value.ToString();
         }
     }
 }
