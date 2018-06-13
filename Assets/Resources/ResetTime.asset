@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a90f442def2cd4d4389676b90dae1d06, type: 3}
   m_Name: ResetTime
   m_EditorClassIdentifier: 
-  Value: 1
+  Value: 0.5
