@@ -17,7 +17,7 @@ public class SpawnerBehaviour : MonoBehaviour
         var go = GameObject.Instantiate(prefab, transform, false);
         var rColor = Random.Range(0, color.colors.Count);
         go.GetComponent<CollectibleBehaviour>().data.Color = color.colors[rColor];
-        var rSpeed = Random.Range(0.05f, 0.2f);
+        var rSpeed = Random.Range(0.05f, 0.1f);
         go.GetComponent<CollectibleBehaviour>().data.Speed = rSpeed;
     }
 }

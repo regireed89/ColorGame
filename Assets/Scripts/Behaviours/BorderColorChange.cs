@@ -15,8 +15,8 @@ public class BorderColorChange : MonoBehaviour
     {
         color = FindObjectOfType<Colors>();
         BorderColorChangeTimer.Value = BorderResetTime.Value;
-        var rColor = Random.Range(0, color.colors.Count);
-        gameObject.GetComponent<SpriteRenderer>().color = color.colors[rColor];
+        var rC = Random.Range(0, color.colors.Count);
+        gameObject.GetComponent<SpriteRenderer>().color = color.colors[rC];
     }
 
     // Update is called once per frame
@@ -34,7 +34,10 @@ public class BorderColorChange : MonoBehaviour
         foreach (var c in FindObjectsOfType<CollectibleBehaviour>())
         {
             if (c.gameObject.GetComponent<CollectibleBehaviour>().data.Color == GetComponent<SpriteRenderer>().color)
+            {
+                BorderColorChangeTimer.Value = BorderResetTime.Value;
                 return;
+            }
         }
         BorderColorChangeTimer.Value = BorderResetTime.Value;
         var rColor = Random.Range(0, color.colors.Count);

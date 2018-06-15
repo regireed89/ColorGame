@@ -169,11 +169,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -198,7 +198,6 @@ GameObject:
   - component: {fileID: 691826725}
   - component: {fileID: 691826724}
   - component: {fileID: 691826723}
-  - component: {fileID: 691826726}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -311,21 +310,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 691826721}
---- !u!114 &691826726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 691826721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c65485c40d207ae4d88ac9ccf92b4ac0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BorderResetTime: {fileID: 11400000, guid: 7f98e077661d42849a63bc51f0fd7541, type: 2}
-  BorderColorChangeTimer: {fileID: 11400000, guid: d269987ad83ce0a4e90eb7f315263ff5,
-    type: 2}
-  ChangeBorder: {fileID: 11400000, guid: 6705484274912ad4e8b5b6f687831cc3, type: 2}
 --- !u!1 &1343748252
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +542,9 @@ GameObject:
   - component: {fileID: 2008316806}
   - component: {fileID: 2008316807}
   - component: {fileID: 2008316808}
+  - component: {fileID: 2008316811}
+  - component: {fileID: 2008316810}
+  - component: {fileID: 2008316809}
   m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
@@ -629,6 +616,61 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2008316805}
+--- !u!114 &2008316809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2008316805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9e1e2a6a5cb55044aaccf0402e8a063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 6705484274912ad4e8b5b6f687831cc3, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2008316810}
+        m_MethodName: ChangeBorderColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &2008316810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2008316805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65485c40d207ae4d88ac9ccf92b4ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BorderResetTime: {fileID: 11400000, guid: b23c348f69729cd46acc70b8b593cd8b, type: 2}
+  BorderColorChangeTimer: {fileID: 11400000, guid: 3a58adcc4a72ff341aa9d8407d639607,
+    type: 2}
+  ChangeBorder: {fileID: 11400000, guid: 6705484274912ad4e8b5b6f687831cc3, type: 2}
+--- !u!114 &2008316811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2008316805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0370fd5466c837f409203ed2eed2d32e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colors: []
 --- !u!1 &2107743835
 GameObject:
   m_ObjectHideFlags: 0

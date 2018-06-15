@@ -394,6 +394,11 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 8.62
       objectReference: {fileID: 0}
+    - target: {fileID: 23678127071281804, guid: 850d43a0eb8a05447bf3fc7810ec0f8b,
+        type: 2}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 850d43a0eb8a05447bf3fc7810ec0f8b, type: 2}
   m_IsPrefabParent: 0
@@ -923,7 +928,6 @@ MonoBehaviour:
   Collect: {fileID: 11400000, guid: b86ac797256a580409bbf4084a0c0e7e, type: 2}
   scoreText: {fileID: 1478743042}
   highScoreText: {fileID: 140515285}
-  CollectText: {fileID: 0}
 --- !u!1 &2052455726
 GameObject:
   m_ObjectHideFlags: 0
